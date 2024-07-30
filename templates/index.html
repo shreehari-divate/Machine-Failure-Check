@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        
+    }
+    .navbar{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        width: auto;
+        height: 50px;
+    }
+    .navbar-brand{
+        text-decoration: none;
+        color: black;
+    }
+    h1{
+        text-align: center;
+        color: white;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 80%;
+        
+    }
+    .img1,.img2,.img3{
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+    }
+    .check{
+        display: flex;
+        justify-content: center;
+    }
+    .check-img{
+        margin-top: 60px;
+        max-width: 200px;
+        height: 150px;
+        cursor: pointer;
+    }
+    .nxt-pg{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+</style>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="/">AXEL INDUSTRIES</a>
+    </nav>
+    <h1>WorkStation Reliablity Partner</h1>
+    <div>
+        <img class="img1" src="/static/m1.jpg" alt="img1">
+        <img class="img2" src="/static/m2.jpg" alt="img2">
+        <img class="img3" src="/static/m3.jpg" alt="img3">
+    </div>
+    <div class="check">
+        <img class="check-img" src="/static/m5.jpeg" alt="check image"><br>
+    </div>
+    <a class="nxt-pg" href="status">Click Here to check the machine status</a>
+</body>
+</html>

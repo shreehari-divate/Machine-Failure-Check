@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+</head>
+<style>
+   body{
+        background-color: black;
+        
+    }
+    .navbar{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        width: auto;
+        height: 50px;
+    }
+    .navbar-brand{
+        text-decoration: none;
+        color: black;
+    }
+    h1{
+        text-align: center;
+        color: whitesmoke;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }    
+    .d-form{
+        display: flex;
+        justify-content: center;
+    }
+    .in-form{
+        border: 4px solid white;
+        border-radius: 2px;
+        padding: 10px;
+        box-shadow: 0px 20px 28px rgba(8, 8, 241, 0.5);
+        width: 500px;
+        height: 800px;
+        background-color: white;
+    }
+    label{
+        font-weight: bold;
+        font-size: 28px ;
+    }
+    input{
+        margin-top: 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        border-bottom: 2px solid;
+        width: 480px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    select{
+        margin-top: 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        border-bottom: 2px solid;
+        width: 480px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .btn{
+        margin-top: 10px;
+        margin-left: 120px;
+        font-size: 18px;
+        background-color: rgb(0, 51, 255);
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100px;
+        height: 25px;
+    }
+    .btn-reset{
+        margin-top: 10px;
+        margin-left: 50px;
+        font-size: 18px;
+        color: white;
+        background-color: rgb(173, 173, 173);
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100px;
+        height: 25px;
+    }   
+    p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+</style>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="/">AXEL INDUSTRIES</a>
+    </nav>
+    <h1>Enter Machine Readings</h1>    
+
+    <div class="d-form">
+        <form action="/status" method="post" class="in-form">
+            <label for="footfall">1] FootFall:</label><br>
+            <input type="text" name="footfall" id="footfall" required>
+
+            <br><label for="tempmode">2] TempMode:</label><br>
+            <select name="tempmode" id="tempmode">
+                <option value="" disabled selected>None</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <!--<input type="text" name="tempmode" id="tempmode" required>-->
+
+            <br><label for="aq">3] Air Quality:</label><br>
+            <select name="aq" id="aq">
+                <option value="" disabled selected>None</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <!--<input type="text" name="aq" id="aq" required>-->
+
+            <br><label for="uss">4] Ultra Sonic Sensor Data:</label><br>
+            <select name="uss" id="uss">
+                <option value="" disabled selected>None</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>            
+            <!--<input type="text" name="uss" id="uss" required>-->  
+
+            <br><label for="cs">5] Current Sensor Readings:</label><br>
+            <select name="cs" id="cs">
+                <option value="" disabled selected>None</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>            
+            <!--<input type="text" name="cs" id="cs" required>-->
+
+            <br><label for="voc">6] Volatile Organic Compounds:</label><br>
+            <select name="voc" id="voc">
+                <option value="" disabled selected>None</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>            
+            <!--<input type="text" name="voc" id="voc" required>-->
+
+            <br><label for="rpm">7] Machine RPM:</label><br>
+            <input type="text" name="rpm" id="rpm" required>
+
+            <br><label for="ip">8] Input Pressure:</label><br>
+            <select name="ip" id="ip">
+                <option value="" disabled selected>None</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>            
+            <!--<input type="text" name="ip" id="ip" required>-->
+
+            <br><label for="tp">9] Operating Temperature:</label><br>
+            <select name="tm" id="tp">
+                <option value="" disabled selected>None</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+            </select>            
+            <!--<input type="text" name="tp" id="tp" required>-->
+
+            <input class="btn" type="submit" value="Check">
+            <button class="btn-reset" type="reset">Reset</button>
+            <p>Status: {{msg}}</p>
+        </form>
+    </div>
+</body>
+</html>
